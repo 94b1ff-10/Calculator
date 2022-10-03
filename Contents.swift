@@ -1,4 +1,5 @@
 import UIKit
+
 //設計図
 class CalculateSimulator {
     
