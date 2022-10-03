@@ -3,9 +3,9 @@ import UIKit
 //設計図
 class CalculateSimulator {
     
-    var textField: String = ""
+    var textField: Double = 0
     
-    enum ButtonType {
+    enum Number {
         case zero
         case one
         case two
@@ -16,77 +16,48 @@ class CalculateSimulator {
         case seven
         case eight
         case nine
-        
+    }
+    
+    enum arithmetic {
         case addition
         case subtraction
         case multiplication
         case division
-        
-        case equal
     }
     
-    func pressKey(type: ButtonType) {
+    func NumberButton(type: Number) {
         switch type {
-        case .zero:
-            textField += "0"
-            print(textField)
-        case .one:
-            textField += "1"
-            print(textField)
-        case .two:
-            textField += "2"
-            print(textField)
-        case .three:
-            textField += "3"
-            print(textField)
-        case .four:
-            textField += "4"
-            print(textField)
-        case .five:
-            textField += "5"
-            print(textField)
-        case .six:
-            textField += "6"
-            print(textField)
-        case .seven:
-            textField += "7"
-            print(textField)
-        case .eight:
-            textField += "8"
-            print(textField)
-        case .nine:
-            textField += "9"
-            print(textField)
-        case .addition:
-            let toDouble = Double(textField)
-            textField += "+"
-            print(textField)
-        case .subtraction:
-            let toDouble = Double(textField)
-            textField += "-"
-            print(textField)
-        case .multiplication:
-            let toDouble = Double(textField)
-            textField += "*"
-            print(textField)
-        case .division:
-            let toDouble = Double(textField)
-            textField += "/"
-            print(textField)
-        case .equal:
-            let toDouble = Double(textField)
-            print(textField)
+        case .zero: break
+        case .one: break
+        case .two: break
+        case .three: break
+        case .four: break
+        case .five: break
+        case .six: break
+        case .seven: break
+        case .eight: break
+        case .nine: break
         }
     }
+    
+    func arithmeticButton(type: arithmetic) {
+        switch type {
+        case .addition: break
+        case .subtraction: break
+        case .multiplication: break
+        case .division: break
+        }
+    }
+    
+    func decimalButton() {}
+    
+    func equalButton() {}
+    
+    func clearButton() {}
 }
 
 
 
 let calculate = CalculateSimulator()
 
-
-calculate.pressKey(type: .eight)
-calculate.pressKey(type: .two)
-calculate.pressKey(type: .addition)
-calculate.pressKey(type: .five)
-calculate.pressKey(type: .equal)
+print(calculate.textField)
