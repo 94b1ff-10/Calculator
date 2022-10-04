@@ -61,4 +61,3 @@ class CalculateSimulator {
 let calculate = CalculateSimulator()
 
 print(calculate.textField)
-
