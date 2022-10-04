@@ -71,31 +71,25 @@ class CalculateSimulator {
         }
     }
     
+//    *
     func arithmeticButton(type: Arithmetic) {
         switch type {
         case .addition:
             result = textField
             textField = 0
-            print(result)
         case .subtraction:
             result = textField
             textField = 0
-            print(result)
         case .multiplication:
             result = textField
             textField = 0
-            print(result)
         case .division:
             result = textField
             textField = 0
-            print(result)
         }
     }
     
-    func decimalButton() {}
-    
-    func clearButton() {}
-    
+//    *
     func equalButton(type: Arithmetic) {
         switch type {
         case .addition:
@@ -116,7 +110,20 @@ class CalculateSimulator {
             print(result)
         }
     }
-
+    
+//    *
+    func decimalButton() {}
+    
+    func clearButton() {
+        textField = 0
+        print(textField)
+    }
+    
+    func allClearButton() {
+        result = 0
+        textField = 0
+        print(textField)
+    }
 }
 
 
@@ -124,13 +131,21 @@ class CalculateSimulator {
 let calculate = CalculateSimulator()
 
 print(calculate.textField)
+
 calculate.numberButton(type: .one)
 calculate.numberButton(type: .two)
 
+calculate.arithmeticButton(type: .multiplication)
 
-calculate.arithmeticButton(type: .division)
+calculate.numberButton(type: .five)
 
-calculate.numberButton(type: .eight)
-calculate.numberButton(type: .zero)
+calculate.clearButton()
 
-calculate.equalButton(type: .division)
+calculate.numberButton(type: .five)
+
+calculate.equalButton(type: .multiplication)
+
+
+// * → Problems left for the future.
+// - Share selected types.
+// - Create functions of decimal.
