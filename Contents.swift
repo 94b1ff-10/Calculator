@@ -4,6 +4,7 @@ import UIKit
 class CalculateSimulator {
     
     var textField: Double = 0
+    var result: Double = 0
     
     enum Number {
         case zero
@@ -18,42 +19,104 @@ class CalculateSimulator {
         case nine
     }
     
-    enum arithmetic {
+    enum Arithmetic {
         case addition
         case subtraction
         case multiplication
         case division
     }
     
-    func NumberButton(type: Number) {
+    func numberButton(type: Number) {
         switch type {
-        case .zero: break
-        case .one: break
-        case .two: break
-        case .three: break
-        case .four: break
-        case .five: break
-        case .six: break
-        case .seven: break
-        case .eight: break
-        case .nine: break
+        case .zero:
+            textField *= 10
+            textField += 0
+            print(textField)
+        case .one:
+            textField *= 10
+            textField += 1
+            print(textField)
+        case .two:
+            textField *= 10
+            textField += 2
+            print(textField)
+        case .three:
+            textField *= 10
+            textField += 3
+            print(textField)
+        case .four:
+            textField *= 10
+            textField += 4
+            print(textField)
+        case .five:
+            textField *= 10
+            textField += 5
+            print(textField)
+        case .six:
+            textField *= 10
+            textField += 6
+            print(textField)
+        case .seven:
+            textField *= 10
+            textField += 7
+            print(textField)
+        case .eight:
+            textField *= 10
+            textField += 8
+            print(textField)
+        case .nine:
+            textField *= 10
+            textField += 9
+            print(textField)
         }
     }
     
-    func arithmeticButton(type: arithmetic) {
+    func arithmeticButton(type: Arithmetic) {
         switch type {
-        case .addition: break
-        case .subtraction: break
-        case .multiplication: break
-        case .division: break
+        case .addition:
+            result = textField
+            textField = 0
+            print(result)
+        case .subtraction:
+            result = textField
+            textField = 0
+            print(result)
+        case .multiplication:
+            result = textField
+            textField = 0
+            print(result)
+        case .division:
+            result = textField
+            textField = 0
+            print(result)
         }
     }
     
     func decimalButton() {}
     
-    func equalButton() {}
-    
     func clearButton() {}
+    
+    func equalButton(type: Arithmetic) {
+        switch type {
+        case .addition:
+            result += textField
+            textField = 0
+            print(result)
+        case .subtraction:
+            result -= textField
+            textField = 0
+            print(result)
+        case .multiplication:
+            result *= textField
+            textField = 0
+            print(result)
+        case .division:
+            result /= textField
+            textField = 0
+            print(result)
+        }
+    }
+
 }
 
 
@@ -61,3 +124,13 @@ class CalculateSimulator {
 let calculate = CalculateSimulator()
 
 print(calculate.textField)
+calculate.numberButton(type: .one)
+calculate.numberButton(type: .two)
+
+
+calculate.arithmeticButton(type: .division)
+
+calculate.numberButton(type: .eight)
+calculate.numberButton(type: .zero)
+
+calculate.equalButton(type: .division)
