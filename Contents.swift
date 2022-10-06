@@ -135,4 +135,13 @@ print(calculate.textField) //0.0
 
 // Test area ↓
 
-calculate.
+calculate.numberButton(type: .one)
+calculate.numberButton(type: .two)
+
+calculate.arithmeticButton(type: .multiplication)
+
+calculate.numberButton(type: .five)
+calculate.numberButton(type: .zero)
+
+calculate.equalButton(type: .multiplication)
+
