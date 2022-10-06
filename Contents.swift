@@ -115,37 +115,33 @@ class CalculateSimulator {
     func decimalButton() {}
     
     func clearButton() {
-        textField = 0
-        print(textField)
-    }
-    
-    func allClearButton() {
-        result = 0
-        textField = 0
-        print(textField)
+        if textField == 0 {
+            result = 0
+            print(textField)
+        } else {
+            textField = 0
+            print(textField)
+        }
     }
 }
-
-
-
-let calculate = CalculateSimulator()
-
-print(calculate.textField)
-
-calculate.numberButton(type: .one)
-calculate.numberButton(type: .two)
-
-calculate.arithmeticButton(type: .multiplication)
-
-calculate.numberButton(type: .five)
-
-calculate.clearButton()
-
-calculate.numberButton(type: .five)
-
-calculate.equalButton(type: .multiplication)
-
 
 // * → Problems left for the future.
 // - Share selected types.
 // - Create functions of decimal.
+
+
+let calculate = CalculateSimulator()
+print(calculate.textField)
+
+// Test area ↓
+
+calculate.numberButton(type: .one)
+
+calculate.arithmeticButton(type: .addition)
+
+calculate.numberButton(type: .two)
+
+calculate.equalButton(type: .addition)
+
+
+
