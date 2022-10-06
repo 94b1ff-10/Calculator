@@ -131,17 +131,8 @@ class CalculateSimulator {
 
 
 let calculate = CalculateSimulator()
-print(calculate.textField)
+print(calculate.textField) //0.0
 
 // Test area ↓
 
-calculate.numberButton(type: .one)
-
-calculate.arithmeticButton(type: .addition)
-
-calculate.numberButton(type: .two)
-
-calculate.equalButton(type: .addition)
-
-
-
+calculate.
